@@ -1,12 +1,12 @@
 import cls from './sidebar.module.scss'
-import { TAGS } from '../../data.ts'
 
 type Props = {
   selectedTags: string[],
+  allTags: string[],
   setSelectedTags: React.Dispatch<React.SetStateAction<string[]>>,
 }
 
-const Sidebar = ({ setSelectedTags, selectedTags }: Props) => {
+const Sidebar = ({ setSelectedTags, allTags, selectedTags }: Props) => {
   const onToggleTag = (currentTag: string) => {
     setSelectedTags(prevTags => {
       if (prevTags.includes(currentTag)) {
@@ -30,8 +30,9 @@ const Sidebar = ({ setSelectedTags, selectedTags }: Props) => {
         Все темы
       </button>
       {
-        TAGS.map(tag => (
+        allTags.map(tag => (
           <button
+            key={tag}
             className={selectedTags.includes(tag) ? cls.selected : ''}
             onClick={() => onToggleTag(tag)}
           >

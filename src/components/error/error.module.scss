@@ -1,0 +1,16 @@
+.content {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 40px 20px;
+
+  p {
+    font-weight: 800;
+    padding-bottom: 20px;
+    font-size: $font-size;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}

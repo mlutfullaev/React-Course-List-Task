@@ -1,6 +1,10 @@
 # React + TypeScript + Vite
 
-Задание:
+После git clone не забудьте создать .env файл от .env.example
+
+### Stack: React, TypeScript, Scss, Axios, React Router Dom
+
+## Задание:
 Существует API эндпоинт
 GET https://logiclike.com/docs/courses.json
 
